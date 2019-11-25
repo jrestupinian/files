@@ -52,7 +52,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " Set the default file encoding to UTF-8:
 set encoding=utf-8
-
+set cursorline
 set nu
 set ruler
 set autoindent
