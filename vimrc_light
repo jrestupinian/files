@@ -153,11 +153,17 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme zellner
+    colorscheme industry
 catch
 endtry
 
-set background=light
+"set background=light
+
+" Specific for vimdiff
+if &diff
+    syntax off
+    colorscheme industry
+endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
