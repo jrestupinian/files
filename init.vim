@@ -65,4 +65,4 @@ set undodir=~/.config/nvim/undo//
 set undofile
 
 command! Black execute ':!black %'
-
+nnoremap <F2> :NERDTreeToggle<CR>
