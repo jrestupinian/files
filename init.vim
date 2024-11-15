@@ -1,3 +1,8 @@
+" Instructions
+" you need to install vim-plug
+" https://github.com/junegunn/vim-plug?tab=readme-ov-file
+" and then run :PlugInstall
+
 " Initialize plugin manager
 call plug#begin('~/.local/share/nvim/plugged')
 
