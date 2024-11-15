@@ -29,7 +29,7 @@ set number
 set relativenumber
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 set autoindent
 set smartindent
 set colorcolumn=80
