@@ -1,8 +1,3 @@
-" Instructions
-" you need to install vim-plug
-" https://github.com/junegunn/vim-plug?tab=readme-ov-file
-" and then run :PlugInstall
-
 " Initialize plugin manager
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -28,8 +23,9 @@ call plug#end()
 set number
 set relativenumber
 set tabstop=4
-set shiftwidth=4
+set softtabstop=0
 set noexpandtab
+set shiftwidth=4
 set autoindent
 set smartindent
 set colorcolumn=80
@@ -71,3 +67,4 @@ set undofile
 
 command! Black execute ':!black %'
 nnoremap <F2> :NERDTreeToggle<CR>
+
