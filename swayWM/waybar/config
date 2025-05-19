@@ -41,7 +41,7 @@
     },
 
     "clock": {
-        "timezone": "America/Detroit",
+        "timezone": "Europe/Helsinki",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}",
     },
@@ -76,14 +76,14 @@
         "format": "{}",
         "signal": 8,
         "interval": "once",
-        "exec": "/home/jay/.config/sway/audio.sh",
-        "on-click": "pavucontrol",
+        "exec": "/home/josee/.config/sway/audio.sh",
+        "on-click": "wireplumber",
     },
 
     "custom/hostname": {
         "format": "🖳  {}",
         "exec": "/usr/bin/hostname -f",
         "interval": "once",
-        "on-click": "/usr/bin/rxvt -e /usr/bin/htop",
+        "on-click": "/usr/bin/foot -e /usr/bin/htop",
     },
 }
