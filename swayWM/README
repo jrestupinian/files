@@ -1,0 +1,11 @@
+Installing packages
+
+The following command was used to install the required packages:
+
+sudo apt install alacritty light sway swaybg swayidle swayimg swaylock waybar wofi fonts-font-awesome
+
+Required Directories
+
+The following command will create the three required directories, if they’re not already present:
+
+mkdir -p ~/.config/sway ~/.config/waybar ~/.config/wofi
