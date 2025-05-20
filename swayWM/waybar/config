@@ -77,7 +77,7 @@
         "signal": 8,
         "interval": "once",
         "exec": "/home/josee/.config/sway/audio.sh",
-        "on-click": "wireplumber",
+        "on-click": "pavucontrol",
     },
 
     "custom/hostname": {
