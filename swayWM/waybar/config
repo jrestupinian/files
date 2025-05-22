@@ -84,6 +84,6 @@
         "format": "🖳  {}",
         "exec": "/usr/bin/hostname -f",
         "interval": "once",
-        "on-click": "/usr/bin/foot -e /usr/bin/htop",
+        "on-click": "kitty -e /usr/bin/btop",
     },
 }
