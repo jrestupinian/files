@@ -1,0 +1,9 @@
+NixOS good wiki reference
+https://wiki.nixos.org/wiki/Displaylink
+
+good kernel module an extramodulepackages
+https://discourse.nixos.org/t/how-to-make-displaylink-work-with-wayland-and-gnome/62809
+
+how to disable a monitor when lid is close
+https://github.com/hyprwm/Hyprland/issues/5614
+exec-once = cat /proc/acpi/button/lid/LID/state  | grep closed | sleep 3 && hyprctl keyword monitor "eDP-1, disable" && notify-send "Laptop lead closed, disabling monitor"
