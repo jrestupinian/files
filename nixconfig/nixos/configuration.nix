@@ -8,19 +8,13 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/boot.nix
+      ./modules/networking.nix
+      ./modules/environment-variables.nix
+      ./modules/displaylink.nix
+      ./modules/sound.nix
+      ./modules/bluetooth.nix
     ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelModules = [ "evdi" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.evdi ];
-
-  networking.hostName = "frodo"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Europe/Helsinki";
@@ -40,17 +34,6 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-  nixpkgs.config.allowUnfree = true;
- 
-  environment.variables = {    
-    WLR_EVDI_RENDER_DEVICE = "/dev/dri/card1";                                                                                                   
-  };
-  services.xserver.videoDrivers = [ "displaylink" ];
-  # systemd.services.dlm.wantedBy = [ "multi-user.target" ]; 
-  systemd.services.dlm = {
-    enable = true;
-    wantedBy = [ "multi-user.target" ];
-  };
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -58,13 +41,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
