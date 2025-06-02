@@ -78,6 +78,18 @@
     ];
   };
 
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "Hyprland";
+        user = "josee";
+      };
+      default_session = initial_session;
+    };
+  };
+
+
   programs.firefox.enable = true;
   programs.hyprland = {
     enable = true;
@@ -100,6 +112,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     neovim
+    ripgrep
     kitty
     lua
     waybar
@@ -112,6 +125,11 @@
     linuxKernel.packages.linux_6_12.evdi
     usbutils
     bitwarden-desktop
+    hyprpicker
+    hyprcursor
+    hyprlock
+    hypridle
+    hyprpaper
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
