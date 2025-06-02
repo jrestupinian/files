@@ -4,6 +4,7 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=0")
 vim.cmd("set relativenumber")
 vim.cmd("set colorcolumn=80")
+vim.cmd("set cursorline")
 vim.cmd("set nowrap")
 vim.g.mapleader = ","
 
