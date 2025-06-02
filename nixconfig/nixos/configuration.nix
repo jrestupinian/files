@@ -14,6 +14,7 @@
       ./modules/displaylink.nix
       ./modules/sound.nix
       ./modules/bluetooth.nix
+      ./modules/mycronjobs.nix
     ];
 
   # Set your time zone.
@@ -87,6 +88,8 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    cron
+    cronutils
     neovim
     ripgrep
     kitty
@@ -106,6 +109,7 @@
     hyprlock
     hypridle
     hyprpaper
+    logseq
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
