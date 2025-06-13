@@ -68,10 +68,15 @@
 
 
   programs.firefox.enable = true;
+
   programs.hyprland = {
     enable = true;
     withUWSM = true;
     xwayland.enable = true;
+  };
+
+  hardware = {
+    graphics.enable = true;
   };
 
   programs.git.enable = true;
@@ -110,6 +115,7 @@
     hypridle
     hyprpaper
     logseq
+    python313
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
