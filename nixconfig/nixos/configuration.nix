@@ -15,6 +15,7 @@
       ./modules/sound.nix
       ./modules/bluetooth.nix
       ./modules/mycronjobs.nix
+      ./modules/gnome.nix
     ];
 
   # Set your time zone.
@@ -36,7 +37,7 @@
   # services.xserver.enable = true;
 
   # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
+  services.xserver.xkb.layout = "fi";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
@@ -56,7 +57,7 @@
   };
 
   services.greetd = {
-    enable = true;
+    enable = false;
     settings = rec {
       initial_session = {
         command = "Hyprland";
@@ -114,8 +115,12 @@
     hyprlock
     hypridle
     hyprpaper
+    hyprshot
     logseq
     python313
+    discord
+    unzip
+    jq
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
