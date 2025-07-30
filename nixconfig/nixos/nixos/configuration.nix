@@ -15,6 +15,7 @@
       ./modules/sound.nix
       ./modules/bluetooth.nix
       ./modules/mycronjobs.nix
+      ./modules/gnome.nix
     ];
 
   # Set your time zone.
@@ -56,7 +57,7 @@
   };
 
   services.greetd = {
-    enable = true;
+    enable = false;
     settings = rec {
       initial_session = {
         command = "Hyprland";
