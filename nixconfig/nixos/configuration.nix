@@ -118,9 +118,12 @@
     hyprshot
     logseq
     python313
+    python313Packages.pytest
+    python313Packages.pip-tools
     discord
     unzip
     jq
+    thunderbird
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
