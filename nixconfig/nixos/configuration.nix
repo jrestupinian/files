@@ -124,6 +124,7 @@
     unzip
     jq
     thunderbird
+    typora
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
