@@ -6,9 +6,9 @@
   description = "backup logseq every 15 minutes";
   wantedBy = [ "multi-user.target" ];
   serviceConfig = {
-    ExecStart = "/home/josee/logseqbk.sh /dev/null 2>&1";
+    ExecStart = "/home/josee/logseqbk.sh";
     User = "josee";
-    Environment = "HOME=/home/josee";
+    Environment = "PATH=/run/current-system/sw/bin;/usr/bin:/bin";
     };
   };
   

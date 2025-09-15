@@ -96,6 +96,7 @@
     wget
     cron
     cronutils
+    git
     neovim
     ripgrep
     kitty
