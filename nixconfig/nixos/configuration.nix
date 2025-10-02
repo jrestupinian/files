@@ -16,6 +16,7 @@
       ./modules/bluetooth.nix
       ./modules/mycronjobs.nix
       ./modules/gnome.nix
+      ./modules/nvim.nix
     ];
 
   # Set your time zone.
@@ -97,10 +98,7 @@
     cron
     cronutils
     git
-    neovim
-    ripgrep
     kitty
-    lua
     waybar
     wofi
     starship
