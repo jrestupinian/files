@@ -8,24 +8,24 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci_renesas" "xhci_pci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci_renesas" "xhci_pci" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/6ceb0228-4927-44b8-9e7c-a979c10c15b5";
+    { device = "/dev/disk/by-uuid/10535c34-8e2f-4eda-befd-3a51cf753621";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/E649-CBBF";
+    { device = "/dev/disk/by-uuid/0521-09E4";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/8e5c3f14-2d7c-415a-a0be-663f296a4ae0"; }
+    [ { device = "/dev/disk/by-uuid/a7c740f0-1d78-4e8f-94d4-a97f45d1dcf1"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -34,7 +34,6 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp2s0f0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp6s0f3u1u3.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wwan0.useDHCP = lib.mkDefault true;
 

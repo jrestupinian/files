@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/boot.nix
+      ./modules/displaylink.nix
       ./modules/networking.nix
       ./modules/environment-variables.nix
       ./modules/sound.nix
@@ -18,7 +19,6 @@
     ];
 
   # unused modules
-  # ./modules/displaylink.nix
   # ./modules/mycronjobs.nix
 
   # Set your time zone.
@@ -37,7 +37,7 @@
   };
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  services.xserver.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "fi";
@@ -103,10 +103,12 @@
     cron
     cronutils
     git
-    gh
     kitty
     waybar
     wofi
+    displaylink
+    linuxKernel.packages.linux_6_12.evdi
+    wlroots_0_18
     starship
     yazi
     zig
@@ -122,18 +124,31 @@
     python313
     python313Packages.pytest
     python313Packages.pip-tools
+    podman
+    podman-desktop
+    podman-compose
+    gnumake
+    gettext
     unzip
     jq
-    thunderbird
     typora
     discord
+    libreoffice-qt6-fresh
+    sqlitestudio
+    chessx
+    chessdb
+    wl-clipboard
+    v4l-utils
+    cheese
+    jqp
+    vscode
+    arandr
+    autorandr
+    edid-decode
   ];
 
   # Packages removed
  
-    # displaylink
-    # linuxKernel.packages.linux_6_12.evdi
-    # wlroots_0_18
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -144,9 +159,11 @@
   # };
 
   # List services that you want to enable:
+  services.autorandr.enable = true;
+	
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

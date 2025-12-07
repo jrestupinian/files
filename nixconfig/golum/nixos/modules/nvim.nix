@@ -11,7 +11,8 @@
 	pkgs.gcc
 	pkgs.fzf
 	pkgs.fd
-	pkgs.lazygit
 	pkgs.vimPlugins.fzf-lua
+	pkgs.luajitPackages.luarocks-nix
+        pkgs.tree-sitter
   ];
 }

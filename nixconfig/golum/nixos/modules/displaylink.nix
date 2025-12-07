@@ -4,7 +4,7 @@
   # Add configurations
   nixpkgs.config.allowUnfree = true;
  
-  services.xserver.videoDrivers = [ "displaylink" ];
+  services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
   # systemd.services.dlm.wantedBy = [ "multi-user.target" ]; 
   systemd.services.dlm = {
     enable = true;

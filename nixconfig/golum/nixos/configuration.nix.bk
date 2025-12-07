@@ -14,6 +14,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking.hostName = "golum"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -56,7 +59,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
+  # services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jose = {
@@ -76,7 +79,6 @@
     wget
     git
     curl
-    gh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -90,7 +92,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

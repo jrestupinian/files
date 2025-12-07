@@ -5,6 +5,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # boot.kernelModules = [ "evdi" ];
-  # boot.extraModulePackages = [ config.boot.kernelPackages.evdi ];
+  boot.kernelModules = [ "evdi" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.evdi ];
 }
